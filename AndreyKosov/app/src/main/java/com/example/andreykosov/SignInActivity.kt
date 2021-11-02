@@ -19,11 +19,11 @@ class SignInActivity : AppCompatActivity() {
             val signInValidation = Validator()
             when {
                 signInValidation.validation(emailValue, passwordValue)
-                    -> startActivity(intentProfile)
+                -> startActivity(intentProfile)
                 (!(emailValue.contains("@") && emailValue.length >= 7) && passwordValue.length >= 8)
-                    -> bindingClass.signInEmail.error = "Enter a valid email address"
+                -> bindingClass.signInEmail.error = "Enter a valid email address"
                 passwordValue.length < 8
-                    -> bindingClass.signInPassword.error = "Password must contain at least 8 characters"
+                -> bindingClass.signInPassword.error = "Password must contain at least 8 characters"
             }
         }
         bindingClass.signInBottomTextClickable.setOnClickListener {

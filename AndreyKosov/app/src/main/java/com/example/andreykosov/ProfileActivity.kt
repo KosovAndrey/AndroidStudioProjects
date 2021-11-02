@@ -1,8 +1,8 @@
 package com.example.andreykosov
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.andreykosov.databinding.ActivityProfileBinding
 
 class ProfileActivity : AppCompatActivity() {
