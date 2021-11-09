@@ -1,7 +1,7 @@
 package com.example.andreykosov
 
-import android.os.Bundle
 import android.content.Intent
+import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.andreykosov.databinding.ActivityGetstartedBinding
 
@@ -16,6 +16,5 @@ class GetStartedActivity : AppCompatActivity() {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }
-
     }
 }

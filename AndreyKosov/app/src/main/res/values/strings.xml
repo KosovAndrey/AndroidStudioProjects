@@ -19,6 +19,9 @@
     <string name="register_additional_up_text">We help you meet up you tasks on time.</string>
     <string name="register_button_text">Register</string>
     <string name="register_bottom_additional_text">Sign in</string>
-    <string name="profile_welcome_email">Welcome qwerty@gmail.com</string>
+    <string name="error_email_length">Email must contain at least 6 characters!</string>
+    <string name="error_email_sign">Email must contain "@"</string>
+    <string name="error_password_length">Password must contain at least 8 characters!</string>
+    <string name="error_password_different">Passwords must match!</string>
 
 </resources>

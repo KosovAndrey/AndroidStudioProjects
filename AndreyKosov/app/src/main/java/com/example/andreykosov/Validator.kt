@@ -1,11 +1,25 @@
 package com.example.andreykosov
 
-class Validator {
-    fun validation(emailValue: String, passwordValue: String): Boolean {
-        var validation = false
-        if (emailValue.contains("@") && emailValue.length >= 7 && passwordValue.length >= 8) {
-            validation = true
+import android.content.Context
+
+class Validator(private val context: Context) {
+    fun validateEmail(emailValue: String): String? {
+        return when {
+            emailValue.length <= 6 -> context.getString(R.string.error_email_length)
+            !(emailValue.contains("@")) -> context.getString(R.string.error_email_sign)
+            else -> null
         }
-        return validation
+    }
+    fun validatePassword(passwordValue: String): String? {
+        return when {
+            passwordValue.length <= 7 -> context.getString(R.string.error_password_length)
+            else -> null
+        }
+    }
+    fun validateEqualPassword(passwordValue: String, passwordConfirmValue: String): String? {
+        return when {
+            passwordValue != passwordConfirmValue -> context.getString(R.string.error_password_different)
+            else -> null
+        }
     }
 }
