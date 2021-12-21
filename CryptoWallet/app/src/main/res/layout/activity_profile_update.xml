@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileUpdateActivity">
+
+    <TextView
+        android:id="@+id/textViewProfileUpdateMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="@string/profile_update"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/imageButtonProfileUpdate"
+        android:layout_width="170dp"
+        android:layout_height="181dp"
+        android:src="@drawable/img_new_photo"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewProfileUpdateMain"
+        app:layout_constraintStart_toStartOf="@+id/textViewProfileUpdateMain"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProfileUpdateMain">
+
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/textViewProfileUpdateFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="292dp"
+        android:text="@string/first_name"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutProfileUpdateFirstName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="15dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProfileUpdateFirstName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextProfileUpdateFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/hint_for_first_name"
+            android:inputType="textPersonName"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColorHint="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewProfileUpdateLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/last_name"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutProfileUpdateFirstName">
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutProfileUpdateLastName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        app:layout_goneMarginStart="5dp"
+        android:layout_marginEnd="15dp"
+        app:boxBackgroundColor="@color/white"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxStrokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProfileUpdateLastName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextProfileUpdateLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/hint_for_last_name"
+            android:inputType="textPersonName"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColorHint="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/materialButtonProfileUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/poppins"
+        android:text="@string/profile_update_button"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutProfileUpdateLastName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
