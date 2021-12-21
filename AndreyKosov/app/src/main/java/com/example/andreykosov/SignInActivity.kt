@@ -11,19 +11,21 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.signInMaterialButton.setOnClickListener {
-            val signInValidation = Validator(this)
-            val emailValue = binding.signInEmailEditText.text.toString()
-            val passwordValue = binding.signInPasswordEditText.text.toString()
-            binding.signInEmailEditText.error = signInValidation.validateEmail(emailValue)
-            binding.signInPasswordEditText.error = signInValidation.validatePassword(passwordValue)
-            if (signInValidation.validateEmail(emailValue) == null && signInValidation.validatePassword(passwordValue) == null) {
+        binding.materialButtonSignIn.setOnClickListener {
+            val validation = Validator(this)
+            val emailValue = binding.textInputEditTextSignInEmail.text.toString()
+            val passwordValue = binding.textInputEditTextSignInPassword.text.toString()
+            binding.textInputLayoutSignInEmail.error = validation.validateEmail(emailValue)
+            binding.textInputLayoutSignInPassword.error = validation.validatePassword(passwordValue)
+            if (binding.textInputLayoutSignInEmail.error.isNullOrBlank() &&
+                binding.textInputLayoutSignInPassword.error.isNullOrBlank()
+            ) {
                 val intentProfile = Intent(this, ProfileActivity::class.java)
-                intent.putExtra("Name", emailValue)
+                intentProfile.putExtra("Name", emailValue)
                 startActivity(intentProfile)
             }
         }
-        binding.signInBottomTextClickable.setOnClickListener {
+        binding.textViewSignInBottomClickable.setOnClickListener {
             val intentRegister = Intent(this, RegisterActivity::class.java)
             startActivity(intentRegister)
         }

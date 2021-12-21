@@ -6,13 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.andreykosov.databinding.ActivityGetstartedBinding
 
 class GetStartedActivity : AppCompatActivity() {
-    private lateinit var bindingClass: ActivityGetstartedBinding
+    private lateinit var binding: ActivityGetstartedBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_getstarted)
-        bindingClass = ActivityGetstartedBinding.inflate(layoutInflater)
-        setContentView(bindingClass.root)
-        bindingClass.getStartedButton.setOnClickListener {
+        binding = ActivityGetstartedBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.materialButtonGetStarted.setOnClickListener {
             val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
         }

@@ -5,11 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GetStartedActivity"
-    android:background="@color/grey">
+    android:background="@color/grey"
+    tools:context=".GetStartedActivity">
 
     <ImageView
-        android:id="@+id/getStartedUpImage"
+        android:id="@+id/imageViewGetStartedCircles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/image_yellow_circles" />
 
     <ImageView
-        android:id="@+id/getStartedCenterImage"
+        android:id="@+id/imageViewGetStartedCenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="132dp"
@@ -27,7 +27,7 @@
         app:srcCompat="@drawable/get_started_image" />
 
     <TextView
-        android:id="@+id/getStartedMainText"
+        android:id="@+id/textViewGetStartedMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -37,29 +37,30 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/getStartedCenterImage"
-        app:layout_constraintStart_toStartOf="@+id/getStartedCenterImage"
-        app:layout_constraintTop_toBottomOf="@+id/getStartedCenterImage" />
+        app:layout_constraintEnd_toEndOf="@+id/imageViewGetStartedCenter"
+        app:layout_constraintStart_toStartOf="@+id/imageViewGetStartedCenter"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewGetStartedCenter" />
 
     <TextView
-        android:id="@+id/getStartedAdditionalText"
-        android:layout_width="273dp"
-        android:layout_height="130dp"
+        android:id="@+id/textViewGetStartedAdditional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins"
         android:text="@string/get_started_additional_text"
         android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/getStartedMainText"
-        app:layout_constraintStart_toStartOf="@+id/getStartedMainText"
-        app:layout_constraintTop_toBottomOf="@+id/getStartedMainText" />
+        android:textSize="13sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/textViewGetStartedMain"
+        app:layout_constraintStart_toStartOf="@+id/textViewGetStartedMain"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGetStartedMain" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/getStartedButton"
+        android:id="@+id/materialButtonGetStarted"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginBottom="32dp"
-        android:backgroundTint="#FFD615"
+        android:backgroundTint="@color/yellow"
         android:elevation="6dp"
         android:fontFamily="@font/poppins_bold"
         android:stateListAnimator="@null"

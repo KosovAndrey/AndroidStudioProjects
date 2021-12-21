@@ -9,10 +9,10 @@
     tools:context=".SignInActivity">
 
     <TextView
-        android:id="@+id/signInTextGreeting"
+        android:id="@+id/textViewSignInGreeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/poppins"
         android:includeFontPadding="false"
         android:text="@string/sign_in_main_text"
@@ -20,45 +20,42 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/signInBottomText"
+        android:id="@+id/textViewSignInBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins"
         android:text="@string/sign_in_bottom_text"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/signInMaterialButton"
-        app:layout_constraintStart_toStartOf="@+id/signInMaterialButton"
-        app:layout_constraintTop_toBottomOf="@+id/signInMaterialButton" />
+        app:layout_constraintEnd_toEndOf="@+id/materialButtonSignIn"
+        app:layout_constraintStart_toStartOf="@+id/materialButtonSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/materialButtonSignIn" />
 
     <TextView
-        android:id="@+id/signInBottomText_Clickable"
+        android:id="@+id/textViewSignInBottomClickable"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/sign_up"
         android:textColor="@color/yellow"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/signInMaterialButton"
-        app:layout_constraintStart_toStartOf="@+id/signInMaterialButton"
-        app:layout_constraintTop_toBottomOf="@+id/signInBottomText" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewSignInBottom"
+        app:layout_constraintStart_toStartOf="@+id/textViewSignInBottom"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSignInBottom" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/signInEmailLayout"
+        android:id="@+id/textInputLayoutSignInEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -67,29 +64,29 @@
         app:boxCornerRadiusTopStart="25dp"
         app:boxStrokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInImage">
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSignIn">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signInEmailEditText"
+            android:id="@+id/textInputEditTextSignInEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:hint="@string/hint_for_email"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:inputType="textEmailAddress"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/signInPasswordLayout"
+        android:id="@+id/textInputLayoutSignInPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="35dp"
         app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -99,35 +96,36 @@
         app:boxStrokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInEmailLayout">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSignInEmail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/signInPasswordEditText"
+            android:id="@+id/textInputEditTextSignInPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_for_password"
-            android:textColorHint="@color/black"
             android:fontFamily="@font/poppins"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:hint="@string/hint_for_password"
+            android:inputType="textPassword"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
-        android:id="@+id/signInImage"
+        android:id="@+id/imageViewSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/signInTextGreeting"
-        app:layout_constraintStart_toStartOf="@+id/signInTextGreeting"
-        app:layout_constraintTop_toBottomOf="@+id/signInTextGreeting"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewSignInGreeting"
+        app:layout_constraintStart_toStartOf="@+id/textViewSignInGreeting"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSignInGreeting"
         app:srcCompat="@drawable/sign_in_image" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/signInMaterialButton"
+        android:id="@+id/materialButtonSignIn"
         android:layout_width="345dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/yellow"
         android:elevation="6dp"
         android:fontFamily="@font/poppins_bold"
@@ -137,12 +135,12 @@
         android:textSize="20sp"
         android:translationZ="4dp"
         app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewSignInClickable"
+        app:layout_constraintStart_toStartOf="@+id/textViewSignInClickable"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSignInClickable" />
 
     <ImageView
-        android:id="@+id/signInTopImage"
+        android:id="@+id/imageViewSignInTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -150,16 +148,16 @@
         app:srcCompat="@drawable/image_yellow_circles" />
 
     <TextView
-        android:id="@+id/signInTextClickable"
+        android:id="@+id/textViewSignInClickable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/sign_in_forgot_password"
         android:textAlignment="center"
         android:textColor="@color/yellow"
-        app:layout_constraintEnd_toEndOf="@+id/signInPasswordLayout"
-        app:layout_constraintStart_toStartOf="@+id/signInPasswordLayout"
-        app:layout_constraintTop_toBottomOf="@+id/signInPasswordLayout" />
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutSignInPassword"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayoutSignInPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutSignInPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

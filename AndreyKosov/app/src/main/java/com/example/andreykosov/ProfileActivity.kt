@@ -11,9 +11,9 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val userName = intent.extras?.getString("email")
-        binding.profileEmail.text = "Hello ${userName}"
-        binding.profileButtonLogout.setOnClickListener {
+        val userName = intent.extras?.getString("Name")
+        binding.textViewProfileEmail.text = getString(R.string.profile_greeting, userName)
+        binding.imageButtonProfileLogout.setOnClickListener {
             val intentSignIn = Intent(this, SignInActivity::class.java)
             startActivity(intentSignIn)
         }

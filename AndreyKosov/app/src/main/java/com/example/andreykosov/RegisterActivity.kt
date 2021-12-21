@@ -10,21 +10,36 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        binding.registerBottomText.setOnClickListener {
-            val intentSignIn = Intent(this, SignInActivity::class.java)
-            startActivity(intentSignIn)
-        }
-        binding.registerButton.setOnClickListener {
-            val emailValue = binding.registerEmailEditText.text.toString()
-            val passwordValue = binding.registerPasswordEditText.text.toString()
-            val registerValidation = Validator(this)
-            if (registerValidation.validateEmail(emailValue) == null &&
-                registerValidation.validatePassword(passwordValue) == null &&
-                registerValidation.validateEqualPassword(passwordValue, passwordValue) == null) {
-                val intentProfile = Intent(this, ProfileActivity::class.java)
-                intent.putExtra("email", emailValue)
-                startActivity(intentProfile)
+        with(binding) {
+            setContentView(root)
+            textViewRegisterBottom.setOnClickListener {
+                val intentSignIn = Intent(this@RegisterActivity, SignInActivity::class.java)
+                startActivity(intentSignIn)
+            }
+            materialButtonRegister.setOnClickListener {
+                val validation = Validator(this@RegisterActivity)
+                val name = textInputEditTextRegisterName.text.toString()
+                val email = textInputEditTextRegisterEmail.text.toString()
+                val password = textInputEditTextRegisterPassword.text.toString()
+                val passwordConfirm = textInputEditTextRegisterConfirmPassword.text.toString()
+                textInputLayoutRegisterName.error =
+                    validation.validateName(name)
+                textInputLayoutRegisterEmail.error =
+                    validation.validateEmail(email)
+                textInputLayoutRegisterPassword.error =
+                    validation.validatePassword(password)
+                textInputLayoutRegisterConfirmPassword.error =
+                    validation.validateEqualPassword(password, passwordConfirm)
+                if (textInputLayoutRegisterEmail.error == null &&
+                    textInputLayoutRegisterPassword.error == null &&
+                    textInputLayoutRegisterConfirmPassword.error == null &&
+                    textInputLayoutRegisterName.error == null
+
+                ) {
+                    val intentProfile = Intent(this@RegisterActivity, ProfileActivity::class.java)
+                    intentProfile.putExtra("Name", textInputEditTextRegisterName.text.toString())
+                    startActivity(intentProfile)
+                }
             }
         }
     }

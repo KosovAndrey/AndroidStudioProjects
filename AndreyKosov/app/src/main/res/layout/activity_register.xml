@@ -9,10 +9,10 @@
     android:background="@color/grey">
 
     <TextView
-        android:id="@+id/registerMainText"
+        android:id="@+id/textViewRegisterMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/poppins"
         android:includeFontPadding="false"
         android:text="@string/registration_text_main"
@@ -23,12 +23,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registerNameLayout"
+        android:id="@+id/textInputLayoutRegisterName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="35dp"
         app:boxBackgroundColor="@color/white"
         app:boxCornerRadiusBottomEnd="25dp"
@@ -36,24 +36,25 @@
         app:boxCornerRadiusTopEnd="25dp"
         app:boxCornerRadiusTopStart="25dp"
         app:boxStrokeWidth="0dp"
-        app:layout_constraintEnd_toEndOf="@+id/registerAdditionalUpText"
-        app:layout_constraintStart_toStartOf="@+id/registerAdditionalUpText"
-        app:layout_constraintTop_toBottomOf="@+id/registerAdditionalUpText">
+        app:layout_constraintEnd_toEndOf="@+id/textViewRegisterTopAdditional"
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterTopAdditional"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterTopAdditional">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registerNameEditText"
+            android:id="@+id/textInputEditTextRegisterName"
+            android:inputType="textPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins"
             android:hint="@string/hint_for_name"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textColorHint="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registerEmailLayout"
+        android:id="@+id/textInputLayoutRegisterEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,22 +69,23 @@
         app:boxStrokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerNameLayout">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRegisterName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registerEmailEditText"
+            android:id="@+id/textInputEditTextRegisterEmail"
+            android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_for_email"
             android:textColorHint="@color/black"
             android:fontFamily="@font/poppins"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registerPasswordLayout"
+        android:id="@+id/textInputLayoutRegisterPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -98,22 +100,23 @@
         app:boxStrokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerEmailLayout">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRegisterEmail">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registerPasswordEditText"
+            android:id="@+id/textInputEditTextRegisterPassword"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_for_password"
             android:textColorHint="@color/black"
             android:fontFamily="@font/poppins"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/registerConfirmPasswordLayout"
+        android:id="@+id/textInputLayoutRegisterConfirmPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,22 +131,23 @@
         app:boxStrokeWidth="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPasswordLayout">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutRegisterPassword">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/registerConfirmPasswordEditText"
+            android:id="@+id/textInputEditTextRegisterConfirmPassword"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_for_confirm_password"
             android:textColorHint="@color/black"
             android:fontFamily="@font/poppins"
-            android:paddingStart="30sp"
-            android:paddingEnd="30sp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
-        android:id="@+id/registerTopImage"
+        android:id="@+id/imageViewRegisterCircles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,10 +155,10 @@
         app:srcCompat="@drawable/image_yellow_circles" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/registerButton"
+        android:id="@+id/materialButtonRegister"
         android:layout_width="350dp"
         android:layout_height="80dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="@color/yellow"
         android:elevation="6dp"
         android:fontFamily="@font/poppins_bold"
@@ -169,7 +173,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/registerAdditionalUpText"
+        android:id="@+id/textViewRegisterTopAdditional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -177,16 +181,16 @@
         android:text="@string/register_additional_up_text"
         android:textColor="@color/black"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/registerMainText"
-        app:layout_constraintStart_toStartOf="@+id/registerMainText"
-        app:layout_constraintTop_toBottomOf="@+id/registerMainText" />
+        app:layout_constraintEnd_toEndOf="@+id/textViewRegisterMain"
+        app:layout_constraintStart_toStartOf="@+id/textViewRegisterMain"
+        app:layout_constraintTop_toBottomOf="@+id/textViewRegisterMain" />
 
     <TextView
-        android:id="@+id/registerAdditionalBottomText"
+        android:id="@+id/textViewRegisterBottomAdditional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/poppins"
         android:text="@string/register_bottom_text"
         android:textColor="@color/black"
@@ -195,7 +199,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/registerBottomText"
+        android:id="@+id/textViewRegisterBottom"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginStart="16dp"
@@ -203,7 +207,7 @@
         android:text="@string/register_bottom_additional_text"
         android:textColor="@color/yellow"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@+id/registerAdditionalBottomText"
-        app:layout_constraintStart_toEndOf="@+id/registerAdditionalBottomText" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewRegisterBottomAdditional"
+        app:layout_constraintStart_toEndOf="@+id/textViewRegisterBottomAdditional" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
